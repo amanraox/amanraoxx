@@ -1,3 +1,4 @@
+<!Doctype>
 <html>
   <head>
     <title>amanraox</title>
@@ -10,7 +11,6 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
 }
       .button1 {background-color: #00b3ff;}
@@ -19,9 +19,36 @@
   </head>
   <body>
     <pre><h1>This Website is under development<br> <br><b>visit after 69 days</h1></b><br></pre>
-    <pre><h2>Something Amazing is coming soon..   Till then you can checkout my older Portfolio Pages =></h2> <a href="https://amanraox.vercel.app"><button class="button button1">amanraox Portfolio 1</button></a><a href="https://amanraox.vercel.app"><button class="button button2">amanraox Portfolio 2</button></a></pre>
+    <pre><h2>Something Amazing is coming soon..   Till then you can checkout my older Portfolio Pages =></h2> <a href="https://amanraox.github.io/amanraox"><button class="button button1" id="yesButton">amanraox Portfolio 1</button></a><a href="https://amanraox.vercel.app">       <button class="button button2" id="noButton">amanraox Portfolio 2</button></a>
+    
+    can't click portfolio 2?? 😂️😂️
+    Hint: you can navigate from portfolio 1
+    </pre>
 <img src="https://s12.gifyu.com/images/Sfhdh.gif" />
     
     <pre><h2>have a nice day😊</h2></pre>
+    
+
   </body>
 </html>
+
+<script>
+const yesButton = document.querySelector('#yesButton');
+const noButton = document.querySelector('#noButton');
+
+const moveNoButton = () => {
+  var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+  var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+  noButton.style.position = 'absolute';
+  noButton.style.left = `${x}px`;
+  noButton.style.top = `${y}px`;
+}
+
+yesButton.addEventListener('click', () => {
+  window.location.assign('yes.html');
+})
+
+noButton.addEventListener('click', moveNoButton);
+noButton.addEventListener('mouseenter', moveNoButton);
+</script>
